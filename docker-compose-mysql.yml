@@ -4,7 +4,7 @@ services:
     restart: always
     env_file: .env
     environment:
-      SQLALCHEMY_DATABASE_URL: "mysql+pymysql://root:12341234@127.0.0.1/marzneshin"
+      SQLALCHEMY_DATABASE_URL: "mysql+pymysql://root:12341234@127.0.0.1:3307/marzneshin"
     network_mode: host
     volumes:
       - /var/lib/marzneshin:/var/lib/marzneshin
@@ -31,6 +31,6 @@ services:
       MYSQL_ROOT_PASSWORD: 12341234
       MYSQL_DATABASE: marzneshin
     ports:
-      - "127.0.0.1:3306:3306"
+      - "127.0.0.1:3307:3306"
     volumes:
       - /var/lib/marzneshin/mysql:/var/lib/mysql
